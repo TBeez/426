@@ -32,8 +32,10 @@ class FundEditor extends Component {
       date: dateformat(date, "m/dd/yy")
     }
     console.log(donation)
-    this.props.addToFund(donation)  
+    this.props.addToFund(donation)
+    if (amount> 0) {
     this.handleDonationSubmit()
+    }
   }
 
   _handleErrorInputChange(e) {
